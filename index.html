@@ -1,0 +1,403 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FERROMAX - Ferretería</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        🔧 FERRO<span>MAX</span>
+    </div>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <button class="carrito" onclick="mostrarCarrito()">
+        🛒 Carrito (<span id="contador">0</span>)
+    </button>
+</header>
+
+
+<main>
+
+<section id="inicio" class="hero">
+
+    <div class="hero-texto">
+        <p class="etiqueta">FERRETERÍA FERROMAX</p>
+
+        <h1>
+            Todo para tus
+            <span>proyectos</span>
+        </h1>
+
+        <p>
+            Encuentra herramientas, materiales y productos
+            de calidad para tus trabajos de construcción,
+            reparación y mantenimiento.
+        </p>
+
+        <div class="botones">
+            <button onclick="irProductos()">
+                VER PRODUCTOS
+            </button>
+
+            <button class="boton-secundario" onclick="irContacto()">
+                CONTACTAR
+            </button>
+        </div>
+    </div>
+
+    <div class="hero-imagen">
+        <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Toolkits.jpg"
+            alt="Herramientas de ferretería">
+    </div>
+
+</section>
+
+
+<section class="beneficios">
+
+    <div>
+        <span>🚚</span>
+        <h3>Envíos rápidos</h3>
+        <p>Realizamos entregas de tus productos.</p>
+    </div>
+
+    <div>
+        <span>🛠️</span>
+        <h3>Productos de calidad</h3>
+        <p>Herramientas para diferentes trabajos.</p>
+    </div>
+
+    <div>
+        <span>💰</span>
+        <h3>Buenos precios</h3>
+        <p>Precios accesibles para nuestros clientes.</p>
+    </div>
+
+    <div>
+        <span>👨‍🔧</span>
+        <h3>Asesoría</h3>
+        <p>Te ayudamos a elegir tus herramientas.</p>
+    </div>
+
+</section>
+
+
+<section id="productos" class="seccion">
+
+    <div class="titulo">
+        <p>CATÁLOGO</p>
+        <h2>Nuestros productos</h2>
+    </div>
+
+    <div class="productos">
+
+        <article class="producto">
+
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Hammer.jpg"
+                alt="Martillo">
+
+            <div class="producto-info">
+                <h3>Martillo profesional</h3>
+
+                <p>
+                    Martillo resistente para trabajos
+                    de construcción y reparación.
+                </p>
+
+                <strong>S/ 35.00</strong>
+
+                <button onclick="agregarCarrito('Martillo profesional', 35)">
+                    Agregar al carrito
+                </button>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Electric_drill.jpg"
+                alt="Taladro eléctrico">
+
+            <div class="producto-info">
+                <h3>Taladro eléctrico</h3>
+
+                <p>
+                    Taladro para perforaciones
+                    en diferentes materiales.
+                </p>
+
+                <strong>S/ 180.00</strong>
+
+                <button onclick="agregarCarrito('Taladro eléctrico', 180)">
+                    Agregar al carrito
+                </button>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Circular_Saw.jpg"
+                alt="Sierra circular">
+
+            <div class="producto-info">
+                <h3>Sierra eléctrica</h3>
+
+                <p>
+                    Sierra circular para trabajos
+                    de corte.
+                </p>
+
+                <strong>S/ 250.00</strong>
+
+                <button onclick="agregarCarrito('Sierra eléctrica', 250)">
+                    Agregar al carrito
+                </button>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Wrench.jpg"
+                alt="Llave inglesa">
+
+            <div class="producto-info">
+                <h3>Juego de llaves</h3>
+
+                <p>
+                    Llaves resistentes para trabajos
+                    mecánicos y de mantenimiento.
+                </p>
+
+                <strong>S/ 75.00</strong>
+
+                <button onclick="agregarCarrito('Juego de llaves', 75)">
+                    Agregar al carrito
+                </button>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Ratcheting_Screwdriver.jpg"
+                alt="Destornillador">
+
+            <div class="producto-info">
+                <h3>Destornilladores</h3>
+
+                <p>
+                    Destornilladores para diferentes
+                    tipos de tornillos.
+                </p>
+
+                <strong>S/ 45.00</strong>
+
+                <button onclick="agregarCarrito('Destornilladores', 45)">
+                    Agregar al carrito
+                </button>
+            </div>
+
+        </article>
+
+
+        <article class="producto">
+
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Repair_tool_kit.jpg"
+                alt="Kit de herramientas">
+
+            <div class="producto-info">
+                <h3>Kit de herramientas</h3>
+
+                <p>
+                    Kit completo para reparaciones
+                    y trabajos del hogar.
+                </p>
+
+                <strong>S/ 320.00</strong>
+
+                <button onclick="agregarCarrito('Kit de herramientas', 320)">
+                    Agregar al carrito
+                </button>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section id="servicios" class="seccion servicios">
+
+    <div class="titulo">
+        <p>SERVICIOS</p>
+        <h2>Lo que ofrecemos</h2>
+    </div>
+
+    <div class="servicios-grid">
+
+        <article class="servicio">
+
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Renault_Maxity_delivery_truck.jpg"
+                alt="Camión de reparto">
+
+            <div>
+                <h3>🚚 Envíos y delivery</h3>
+
+                <p>
+                    Llevamos tus productos hasta
+                    el lugar que nos indiques.
+                </p>
+            </div>
+
+        </article>
+
+
+        <article class="servicio">
+
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Toolkits.jpg"
+                alt="Asesoría sobre herramientas">
+
+            <div>
+                <h3>👨‍🔧 Asesoría personalizada</h3>
+
+                <p>
+                    Te orientamos para encontrar
+                    la herramienta adecuada.
+                </p>
+            </div>
+
+        </article>
+
+
+        <article class="servicio">
+
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Box_package.jpg"
+                alt="Paquetes preparados">
+
+            <div>
+                <h3>📦 Pedidos preparados</h3>
+
+                <p>
+                    Preparamos tus pedidos para
+                    que puedan ser enviados.
+                </p>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section id="contacto" class="contacto">
+
+    <div class="contacto-info">
+
+        <p>CONTACTO</p>
+
+        <h2>¿Necesitas ayuda?</h2>
+
+        <p>
+            Escríbenos y te ayudaremos con tus
+            consultas sobre productos y pedidos.
+        </p>
+
+        <div class="datos">
+            <p>📞 +51 999 999 999</p>
+            <p>📧 contacto@ferromax.com</p>
+            <p>📍 Pucallpa, Perú</p>
+        </div>
+
+    </div>
+
+
+    <form id="formulario">
+
+        <label for="nombre">Nombre</label>
+
+        <input
+            type="text"
+            id="nombre"
+            placeholder="Escribe tu nombre"
+        >
+
+
+        <label for="correo">Correo electrónico</label>
+
+        <input
+            type="email"
+            id="correo"
+            placeholder="ejemplo@gmail.com"
+        >
+
+
+        <label for="mensaje">Mensaje</label>
+
+        <textarea
+            id="mensaje"
+            rows="5"
+            placeholder="Escribe tu consulta"
+        ></textarea>
+
+
+        <button type="submit">
+            ENVIAR MENSAJE
+        </button>
+
+    </form>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="logo">
+        🔧 FERRO<span>MAX</span>
+    </div>
+
+    <p>
+        © 2026 FERROMAX - Todos los derechos reservados.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
